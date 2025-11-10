@@ -1,3 +1,20 @@
+# poliretos_Grupo4
+
+Proyecto de poliretos en Java - Grupo 4
+
+## Descripción
+
+Este proyecto contiene la implementación de diversos retos de programación organizados en paquetes Java:
+
+- **Loading**: Animaciones de carga con efectos giratorios
+- **Arrays**: Manejo y validación de arrays
+- **Cadena_caracteres**: Procesamiento y análisis de strings
+- **Figuras**: Generación de patrones y figuras geométricas
+- **Gafos_automatas**: Implementación de autómatas finitos
+- **Recursion**: Funciones recursivas (factorial, etc.)
+- **Series_numericas**: Series matemáticas (Fibonacci, etc.)
+- **Series_caracteres**: Series de caracteres
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
