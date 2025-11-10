@@ -61,13 +61,15 @@ public class Figura17 {
                 for (int i = 0; i < 1; i++) {
 
                     if ((fila == 0 && (columna == 0 || columna == columnas-1)) ||
-                        (fila == filas/3*1 && columna == columnas/2) ||
-                        (fila == filas/3*2 && (columna == 0 || columna == columnas-1))) {
+                        (fila == filas/3 && columna == columnas/2) ||
+                        (fila == (filas*2)/3 && (columna == 0 || columna == columnas-1))) {
 
                         ch = '1';
                     }
-                    else if ((fila == filas/3*1-1 && (columna == columnas/2-2 || columna == columnas/2+2)) ||
-                            (fila == filas/3*1+1 && (columna == columnas/2-2 || columna == columnas/2+2))) {
+                    else if ((fila == filas/3-1 && columna == columnas/2-1) ||
+                            (fila == filas/3-1 && columna == columnas/2+1) ||
+                            (fila == filas/3+1 && columna == columnas/2-1) ||
+                            (fila == filas/3+1 && columna == columnas/2+1)) {
 
                         ch = '0';
                     }
@@ -95,13 +97,15 @@ public class Figura17 {
                 int i = 0;
                 while (i < 1) {
                     if ((fila == 0 && (columna == 0 || columna == columnas-1)) ||
-                        (fila == filas/3*1 && columna == columnas/2) ||
-                        (fila == filas/3*2 && (columna == 0 || columna == columnas-1))) {
+                        (fila == filas/3 && columna == columnas/2) ||
+                        (fila == (filas*2)/3 && (columna == 0 || columna == columnas-1))) {
 
                         ch = '1';
                     }
-                    else if ((fila == filas/3*1-1 && (columna == columnas/2-2 || columna == columnas/2+2)) ||
-                            (fila == filas/3*1+1 && (columna == columnas/2-2 || columna == columnas/2+2))) {
+                    else if ((fila == filas/3-1 && columna == columnas/2-1) ||
+                            (fila == filas/3-1 && columna == columnas/2+1) ||
+                            (fila == filas/3+1 && columna == columnas/2-1) ||
+                            (fila == filas/3+1 && columna == columnas/2+1)) {
 
                         ch = '0';
                     }
@@ -132,13 +136,15 @@ public class Figura17 {
                 int i = 0;
                 do {
                     if ((fila == 0 && (columna == 0 || columna == columnas-1)) ||
-                        (fila == filas/3*1 && columna == columnas/2) ||
-                        (fila == filas/3*2 && (columna == 0 || columna == columnas-1))) {
+                        (fila == filas/3 && columna == columnas/2) ||
+                        (fila == (filas*2)/3 && (columna == 0 || columna == columnas-1))) {
 
                         ch = '1';
                     }
-                    else if ((fila == filas/3*1-1 && (columna == columnas/2-2 || columna == columnas/2+2)) ||
-                            (fila == filas/3*1+1 && (columna == columnas/2-2 || columna == columnas/2+2))) {
+                    else if ((fila == filas/3-1 && columna == columnas/2-1) ||
+                            (fila == filas/3-1 && columna == columnas/2+1) ||
+                            (fila == filas/3+1 && columna == columnas/2-1) ||
+                            (fila == filas/3+1 && columna == columnas/2+1)) {
 
                         ch = '0';
                     }
