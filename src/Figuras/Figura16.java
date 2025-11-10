@@ -9,7 +9,7 @@ public class Figura16 {
         int filas = 0;
         // Validación para filas: solo números mayores a 0
         do {
-            System.out.println("Ingrese el número de filas :");
+            System.out.print("Ingrese filas: ");
             try {
                 filas = Integer.parseInt(scanner.nextLine().trim());
                 if (filas <= 0) {
@@ -24,7 +24,7 @@ public class Figura16 {
         int columnas = 0;
         // Validación para columnas: solo números mayores a 0
         do {
-            System.out.println("Ingrese el número de columnas :");
+            System.out.print("Ingrese columnas: ");
             try {
                 columnas = Integer.parseInt(scanner.nextLine().trim());
                 if (columnas <= 0) {
@@ -41,33 +41,91 @@ public class Figura16 {
         System.out.println("Figura 16 usando for:");
         figura16For(filas, columnas);
         System.out.println();
-
+        
+        System.out.println("Figura 16 usando while:");
+        figura16While(filas, columnas);
+        System.out.println();
+        
+        System.out.println("Figura 16 usando do while:");
+        figura16DoWhile(filas, columnas);
+        System.out.println();
     }
 
     public static void figura16For(int filas, int columnas){
-        for(int i = 1; i <= filas; i++){
-            StringBuilder fila = new StringBuilder();
-            
-            for(int j = 1; j <= columnas; j++){
-                if (j == 1 || j == columnas) {
-                    // Extremos izquierdo y derecho: asteriscos
-                    fila.append("*");
-                } else if (i == 1 || i == filas) {
-                    // Extremos superior e inferior: asteriscos
-                    fila.append("*");
-                } else if (j == columnas / 2 || j == (columnas / 2) + 1) {
-                    // Columnas del centro: cruz
-                    fila.append("+");
-                } else if (i == filas / 2 || i == (filas / 2) + 1) {
-                    // Filas del centro: cruz
-                    fila.append("+");
-                } else {
-                    // Entre extremos y centro: guiones
-                    fila.append("-");
+        for(int i = 0; i <= filas; i++){
+            for(int j = 0; j <= columnas; j++){
+                char ch = ' ';
+                for (int k = 0; k < columnas; k++) {
+                    if ( (i == 1  && (j == 1 || j == columnas))  ||
+                        (i == 3  && j == (columnas/2)+1)        ||
+                        (i == 5  && (j == 1 || j == columnas)) ) {
+                        ch = '+';
+                    }
+                    else if ( (i == 2 && (j == 3 || j == columnas-2)) ||
+                        (i == 4 && (j == 3 || j == columnas-2)) ) {
+                        ch = '-';
+                    }
                 }
+                System.out.print(ch);
             }
-            System.out.println(fila.toString());
+            System.out.println();
         }
     }
 
+    //Figura 16 Bucle While
+    public static void figura16While(int filas, int columnas){
+        int i = 0;
+        while(i <= filas){
+            int j = 0;
+            while(j <= columnas){
+                char ch = ' ';
+                int k = 0;
+                while(k < columnas){
+                    if ( (i == 1  && (j == 1 || j == columnas))  ||
+                        (i == 3  && j == (columnas/2)+1)        ||
+                        (i == 5  && (j == 1 || j == columnas)) ) {
+                        ch = '+';
+                    }
+                    else if ( (i == 2 && (j == 3 || j == columnas-2)) ||
+                        (i == 4 && (j == 3 || j == columnas-2)) ) {
+                        ch = '-';
+                    }
+                    k++;
+                }
+                System.out.print(ch);
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
+    }
+
+    //Figura 16 Bucle Do While
+    public static void figura16DoWhile(int filas, int columnas){
+        int i = 0;
+        do{
+            int j = 0;
+            do{
+                char ch = ' ';
+                int k = 0;
+                do{
+                    if ( (i == 1  && (j == 1 || j == columnas))  ||
+                        (i == 3  && j == (columnas/2)+1)        ||
+                        (i == 5  && (j == 1 || j == columnas)) ) {
+                        ch = '+';
+                    }
+                    else if ( (i == 2 && (j == 3 || j == columnas-2)) ||
+                        (i == 4 && (j == 3 || j == columnas-2)) ) {
+                        ch = '-';
+                    }
+                    k++;
+                } while(k < columnas);
+                System.out.print(ch);
+                j++;
+            } while(j <= columnas);
+            System.out.println();
+            i++;
+        } while(i <= filas);
+    }
+    
 }
