@@ -54,8 +54,10 @@ public class Figura19 {
 
             for(int j = 0; j <= i; j++){
                 int valor = triangulo[i][j];
-                if(valor == 1 || valor == 2){
-                    System.out.printf("%-4s","*");
+                if(valor == 1){
+                    System.out.printf("%-4s","+");
+                }else if (valor == 2){
+                    System.out.printf("%-4s", "*");
                 }else{
                     System.out.printf("%-4d", valor);
                 }
@@ -87,8 +89,10 @@ public class Figura19 {
             int j = 0;
             while(j <= i){
                 int valor = triangulo[i][j];
-                if(valor == 1 || valor == 2){
-                    System.out.printf("%-4s","*");
+                if(valor == 1){
+                    System.out.printf("%-4s","+");
+                }else if(valor == 2){
+                    System.out.printf("%-4s", "*");
                 }else{
                     System.out.printf("%-4d", valor);
                 }
@@ -123,7 +127,9 @@ public class Figura19 {
             int j = 0;
             do{
                 int valor = triangulo[i][j];
-                if(valor == 1 || valor == 2){
+                if(valor == 1){
+                    System.out.printf("%-4s","+");
+                }else if(valor == 2){
                     System.out.printf("%-4s","*");
                 }else{
                     System.out.printf("%-4d", valor);
