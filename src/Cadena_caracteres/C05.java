@@ -1,3 +1,5 @@
+package Arrays;
+
 import java.util.Scanner;
 
 public class C05 {
@@ -61,3 +63,4 @@ public class C05 {
     }
 
 }
+
