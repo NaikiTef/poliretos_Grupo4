@@ -1,6 +1,6 @@
 package Recursion;
 
-public class R03 {
+public class Recursion3 {
 
     public void recursion3() {
 

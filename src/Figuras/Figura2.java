@@ -3,7 +3,8 @@ package Figuras;
 import java.util.Scanner;
 
 public class Figura2 {
-    public static void main(String[] args) {
+    
+    public void figura2() {
         Scanner scanner = new Scanner(System.in);
         
         int filas = 0;
@@ -36,8 +37,6 @@ public class Figura2 {
             }
         } while (columnas <= 0);
         
-        scanner.close();
-        
         System.out.println("Figura 2 usando for:");
         figura2For(filas, columnas);
         System.out.println();
@@ -49,7 +48,7 @@ public class Figura2 {
         System.out.println();
     }
 
-    public static void figura2For(int filas, int columnas){
+    public void figura2For(int filas, int columnas){
         for(int i = 1; i <= filas; i++){
             for(int j = 1; j <= columnas; j++){
                 if(i == 1 || i == filas || j == 1 || j == columnas){
@@ -67,7 +66,7 @@ public class Figura2 {
     }
 
     //Figura 2 usando while
-    public static void figura2While(int filas, int columnas){
+    public void figura2While(int filas, int columnas){
         int i = 1;
         while(i <= filas){
             int j = 1;
@@ -89,7 +88,7 @@ public class Figura2 {
     }
 
     //Figura 2 usando do while
-    public static void figura2DoWhile(int filas, int columnas){
+    public void figura2DoWhile(int filas, int columnas){
         int i = 1;
         do{
             int j = 1;

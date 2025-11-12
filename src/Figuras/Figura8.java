@@ -2,7 +2,7 @@ package Figuras;
 
 import java.util.Scanner;
 
-public class F8 {
+public class Figura8 {
 
     public void figura8() {
 
@@ -46,6 +46,5 @@ public class F8 {
         } while (contador <= copiaTamanio);
         contador = 1;
         copiaTamanio = tamanio;
-        scanner.close();
     }
 }

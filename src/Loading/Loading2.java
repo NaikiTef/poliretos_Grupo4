@@ -5,11 +5,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Loading2 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public void loading2(Scanner scanner) {
         System.out.print("Ingrese un carácter para la barra de carga: ");
         char caracter = scanner.next().charAt(0);
-        scanner.close();
+        scanner.nextLine();
         
         System.out.println("Loading 02 --Bucle For (SIN giratorio)");
         for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {

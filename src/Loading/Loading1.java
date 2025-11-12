@@ -3,7 +3,8 @@ package Loading;
 import java.util.concurrent.TimeUnit;
 
 public class Loading1 {
-    public static void main(String[] args) {
+    
+    public void loading1() {
         System.out.println("Loading 01 --Bucle For");
         for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {
             loadingBarra(porcentaje);
@@ -25,6 +26,7 @@ public class Loading1 {
         } while (porcentajeDoWhile <= 100);
         System.out.println();
     }
+    
     private static void pausar(long microsegundos) {
         try {
             TimeUnit.MICROSECONDS.sleep(microsegundos);

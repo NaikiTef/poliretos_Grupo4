@@ -2,7 +2,7 @@ package Figuras;
 
 import java.util.Scanner;
 
-public class F7 {
+public class Figura7 {
 
     public void figura7() {
         Scanner scanner = new Scanner(System.in);
@@ -41,7 +41,6 @@ public class F7 {
             }
             contador++;
         } while (contador <= tamanio);
-        scanner.close();
     }
 
 }

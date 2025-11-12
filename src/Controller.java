@@ -86,6 +86,8 @@ public class Controller {
         System.out.println("6.  Serie Numérica 6");
         System.out.println("7.  Serie Numérica 7");
         System.out.println("8.  Serie Numérica 8");
+        System.out.println("9.  Serie Numérica 9");
+        System.out.println("10. Serie Numérica 10");
         System.out.println("12. Serie Numérica 12");
         System.out.println("────────────────────────────────────────");
         System.out.print("Seleccione una opción: ");
@@ -175,7 +177,23 @@ public class Controller {
                 Series_numericas.SerieNumerica8 serie8 = new Series_numericas.SerieNumerica8();
                 serie8.imprimirSerieNumericaOcho(n8);
                 break;
-            case 12: 
+            case 9:
+                System.out.println("Serie 9: Bucle For");
+                Series_numericas.SerieNumerica9.SerieNumericoFor(scanner);
+                System.out.println("\nSerie 9: Bucle While");
+                Series_numericas.SerieNumerica9.SerieNumericoWhile(scanner);
+                System.out.println("\nSerie 9: Bucle Do While");
+                Series_numericas.SerieNumerica9.SerieNumericoDoWhile(scanner);
+                break;
+            case 10:
+                System.out.println("Serie 10: Bucle For");
+                Series_numericas.SerieNumerica10.SerieNumericoFor(scanner);
+                System.out.println("\nSerie 10: Bucle While");
+                Series_numericas.SerieNumerica10.SerieNumericoWhile(scanner);
+                System.out.println("\nSerie 10: Bucle Do While");
+                Series_numericas.SerieNumerica10.SerieNumericoDoWhile(scanner);
+                break;
+            case 12:
                 System.out.println("Serie 12: Bucle For");
                 Series_numericas.SerieNumerica12.serieNumerica12For();
                 System.out.println("Serie 12: Bucle While");
@@ -183,7 +201,7 @@ public class Controller {
                 System.out.println("Serie 12: Bucle Do While");
                 Series_numericas.SerieNumerica12.serieNumerica12DoWhile();
                 break;
-            default: 
+            default:
                 System.out.println("Opción no válida.");
         }
     }
@@ -254,21 +272,66 @@ public class Controller {
         scanner.nextLine();
         
         switch (opcion) {
-            case 1: Figuras.Figura1.main(new String[]{}); break;
-            case 2: Figuras.Figura2.main(new String[]{}); break;
-            case 3: Figuras.Figura3.main(new String[]{}); break;
-            case 4: Figuras.Figura4.main(new String[]{}); break;
-            case 5: Figuras.Figura5.main(new String[]{}); break;
-            case 6: Figuras.Figura6.main(new String[]{}); break;
-            case 7: Figuras.Figura7.main(new String[]{}); break;
-            case 8: Figuras.Figura8.main(new String[]{}); break;
-            case 9: Figuras.Figura9.main(new String[]{}); break;
-            case 11: Figuras.Figura11.main(new String[]{}); break;
-            case 12: Figuras.Figura12.main(new String[]{}); break;
-            case 16: Figuras.Figura16.main(new String[]{}); break;
-            case 17: Figuras.Figura17.main(new String[]{}); break;
-            case 18: Figuras.Figura18.main(new String[]{}); break;
-            case 19: Figuras.Figura19.main(new String[]{}); break;
+            case 1: 
+                Figuras.Figura1 f1 = new Figuras.Figura1();
+                f1.figura1();
+                break;
+            case 2: 
+                Figuras.Figura2 f2 = new Figuras.Figura2();
+                f2.figura2();
+                break;
+            case 3: 
+                Figuras.Figura3 f3 = new Figuras.Figura3();
+                f3.figura3();
+                break;
+            case 4: 
+                Figuras.Figura4 f4 = new Figuras.Figura4();
+                f4.figura4();
+                break;
+            case 5: 
+                Figuras.Figura5 f5 = new Figuras.Figura5();
+                f5.figura5();
+                break;
+            case 6: 
+                Figuras.Figura6 f6 = new Figuras.Figura6();
+                f6.figura6();
+                break;
+            case 7: 
+                Figuras.Figura7 f7 = new Figuras.Figura7();
+                f7.figura7();
+                break;
+            case 8: 
+                Figuras.Figura8 f8 = new Figuras.Figura8();
+                f8.figura8();
+                break;
+            case 9: 
+                Figuras.Figura9 f9 = new Figuras.Figura9();
+                f9.figura9();
+                break;
+            case 11: 
+                Figuras.Figura11 f11 = new Figuras.Figura11();
+                f11.figura11();
+                break;
+            case 12: 
+                Figuras.Figura12 f12 = new Figuras.Figura12();
+                f12.figura12();
+                break;
+            case 16: 
+                Figuras.Figura16 f16 = new Figuras.Figura16();
+                f16.figura16();
+                break;
+            case 17: 
+                Figuras.Figura17 f17 = new Figuras.Figura17();
+                f17.figura17();
+                break;
+            case 18: 
+                Figuras.Figura18 f18 = new Figuras.Figura18();
+                f18.figura18();
+                break;
+            case 19: 
+                Figuras.Figura19 f19 = new Figuras.Figura19();
+                f19.figura19();
+                break;
             default: System.out.println("Opción no válida.");
         }
     }
@@ -286,36 +349,20 @@ public class Controller {
         
         switch (opcion) {
             case 1: 
-                System.out.println("Cadena Carácter 1: Bucle For");
-                Cadena_caracteres.CadenaCaracter1.cadenaCaracter1For();
-                System.out.println("Cadena Carácter 1: Bucle While");
-                Cadena_caracteres.CadenaCaracter1.cadenaCaracter1While();
-                System.out.println("Cadena Carácter 1: Bucle Do While");
-                Cadena_caracteres.CadenaCaracter1.cadenaCaracter1DoWhile();
+                Cadena_caracteres.CadenaCaracter1 cc1 = new Cadena_caracteres.CadenaCaracter1();
+                cc1.cadenaCaracter1();
                 break;
             case 2: 
-                System.out.println("Cadena Carácter 2: Bucle For");
-                Cadena_caracteres.CadenaCaracter2.cadenaCaracter2For();
-                System.out.println("Cadena Carácter 2: Bucle While");
-                Cadena_caracteres.CadenaCaracter2.cadenaCaracter2While();
-                System.out.println("Cadena Carácter 2: Bucle Do While");
-                Cadena_caracteres.CadenaCaracter2.cadenaCaracter2DoWhile();
+                Cadena_caracteres.CadenaCaracter2 cc2 = new Cadena_caracteres.CadenaCaracter2();
+                cc2.cadenaCaracter2();
                 break;
             case 3:
-                System.out.println("Cadena Carácter 3: Bucle For");
-                Cadena_caracteres.CadenaCaracter3.cadenaCaracter3For();
-                System.out.println("Cadena Carácter 3: Bucle While");
-                Cadena_caracteres.CadenaCaracter3.cadenaCaracter3While();
-                System.out.println("Cadena Carácter 3: Bucle Do While");
-                Cadena_caracteres.CadenaCaracter3.cadenaCaracter3DoWhile();
+                Cadena_caracteres.CadenaCaracter3 cc3 = new Cadena_caracteres.CadenaCaracter3();
+                cc3.cadenaCaracter3();
                 break;
             case 4: 
-                System.out.println("Cadena Carácter 4: Bucle For");
-                Cadena_caracteres.CadenaCaracter4.cadenaCaracter4For();
-                System.out.println("Cadena Carácter 4: Bucle While");
-                Cadena_caracteres.CadenaCaracter4.cadenaCaracter4While();
-                System.out.println("Cadena Carácter 4: Bucle Do While");
-                Cadena_caracteres.CadenaCaracter4.cadenaCaracter4DoWhile();
+                Cadena_caracteres.CadenaCaracter4 cc4 = new Cadena_caracteres.CadenaCaracter4();
+                cc4.cadenaCaracter4();
                 break;
             case 5:
                 Cadena_caracteres.C05 c05 = new Cadena_caracteres.C05();
@@ -350,14 +397,16 @@ public class Controller {
         
         switch (opcion) {
             case 1:
-                Arrays.Array1.main(new String[]{});
+                Arrays.Array1 a1 = new Arrays.Array1();
+                a1.ejecutar(scanner);
                 break;
             case 2:
-                Arrays.Array2.main(new String[]{});
+                Arrays.Array2 a2 = new Arrays.Array2();
+                a2.ejecutar(scanner);
                 break;
             case 3:
                 Arrays.A03 a03 = new Arrays.A03();
-                a03.array3();
+                a03.array3(scanner);
                 break;
             case 4:
                 Arrays.Array04 a04 = new Arrays.Array04();
@@ -367,7 +416,7 @@ public class Controller {
                 break;
             case 5:
                 Arrays.Array5 a5 = new Arrays.Array5();
-                a5.array3();
+                a5.array3(scanner);
                 break;
             default:
                 System.out.println("Opción no válida.");
@@ -380,25 +429,60 @@ public class Controller {
         System.out.println("1. Loading       2. Loading 1    3. Loading 2");
         System.out.println("4. Loading 3     5. Loading 4    6. Loading 5");
         System.out.println("7. Loading 6     8. Loading 7    9. Loading 8");
-        System.out.println("10. Loading 9    11. Loading 10  12. Loading 11");
         System.out.print("Seleccione: ");
         
         int opcion = scanner.nextInt();
         scanner.nextLine();
         
         switch (opcion) {
-            case 1: Loading.Loading.main(new String[]{}); break;
-            case 2: Loading.Loading1.main(new String[]{}); break;
-            case 3: Loading.Loading2.main(new String[]{}); break;
-            case 4: Loading.Loading3.main(new String[]{}); break;
-            case 5: Loading.Loading4.main(new String[]{}); break;
-            case 6: Loading.Loading5.main(new String[]{}); break;
-            case 7: Loading.Loading6.main(new String[]{}); break;
-            case 8: Loading.Loading7.main(new String[]{}); break;
-            case 9: Loading.Loading8.main(new String[]{}); break;
-            case 10: Loading.Loading09.main(new String[]{}); break;
-            case 11: Loading.Loading10.main(new String[]{}); break;
-            case 12: Loading.Loading11.main(new String[]{}); break;
+            case 1: 
+                Loading.Loading l = new Loading.Loading();
+                l.loading();
+                break;
+            case 2: 
+                Loading.Loading1 l1 = new Loading.Loading1();
+                l1.loading1();
+                break;
+            case 3: 
+                Loading.Loading2 l2 = new Loading.Loading2();
+                l2.loading2(scanner);
+                break;
+            case 4: 
+                Loading.Loading3 l3 = new Loading.Loading3();
+                l3.loading3(scanner);
+                break;
+            case 5: 
+                Loading.Loading4 l4 = new Loading.Loading4();
+                l4.loading4();
+                break;
+            case 6: 
+                Loading.Loading5 l5 = new Loading.Loading5();
+                l5.loading5();
+                break;
+            case 7: 
+                Loading.Loading6 l6 = new Loading.Loading6();
+                l6.loading6();
+                break;
+            case 8: 
+                Loading.Loading7 l7 = new Loading.Loading7();
+                l7.loading7();
+                break;
+            case 9: 
+                Loading.Loading8 l8 = new Loading.Loading8();
+                l8.loading8();
+                break;
+            case 10: 
+                Loading.L09 l9 = new Loading.L09();
+                l9.loading09("NombreEjemplo");
+                break;
+            case 11: 
+                Loading.Loading10 l10 = new Loading.Loading10();
+                l10.loading10();
+                break;
+            case 12: 
+                Loading.Loading11 l11 = new Loading.Loading11();
+                l11.loading11(10);
+                break;
             default: System.out.println("Opción no válida.");
         }
     }
@@ -409,17 +493,29 @@ public class Controller {
         System.out.println("1. Recursión 1");
         System.out.println("2. Recursión 2");
         System.out.println("3. Recursión 3");
-        System.out.println("6. Recursión 6");
+        System.out.println("5. Recursión 5");
         System.out.print("Seleccione: ");
         
         int opcion = scanner.nextInt();
         scanner.nextLine();
         
         switch (opcion) {
-            case 1: Recursion.Recursion1.main(new String[]{}); break;
-            case 2: Recursion.Recursion2.main(new String[]{}); break;
-            case 3: Recursion.Recursion3.main(new String[]{}); break;
-            case 6: Recursion.Recursion06.main(new String[]{}); break;
+            case 1:
+                Recursion.Recursion1 r1 = new Recursion.Recursion1();
+                r1.recursion1(scanner);
+                break;
+            case 2:
+                Recursion.Recursion2 r2 = new Recursion.Recursion2();
+                r2.recursion2(scanner);
+                break;
+            case 3:
+                Recursion.Recursion3 r3 = new Recursion.Recursion3();
+                r3.recursion3();
+                break;
+            case 5:
+                Recursion.Recursion5 r5 = new Recursion.Recursion5();
+                r5.recursion5(scanner);
+                break;
             default: System.out.println("Opción no válida.");
         }
     }
@@ -428,20 +524,48 @@ public class Controller {
     private void menuAutomatas() {
         System.out.println("\n=== AUTÓMATAS / GRAFOS ===");
         System.out.println("1. Autómata 1");
-        System.out.println("2. Automara 2");
-        System.out.println("3. Automatas 3");
-        System.out.println("6. Automata 6");
+        System.out.println("2. Autómata 2");
+        System.out.println("3. Autómata 3");
+        System.out.println("4. Autómata 4");
+        System.out.println("5. Autómata 5");
+        System.out.println("6. Autómata 6");
+        System.out.println("7. Autómata 7");
         System.out.print("Seleccione: ");
         
         int opcion = scanner.nextInt();
         scanner.nextLine();
         
         switch (opcion) {
-            case 1: Gafos_automatas.Automata1.main(new String[]{}); break;
-            case 2: Gafos_automatas.Automara2.main(new String[]{}); break;
-            case 3: Gafos_automatas.Automatas03.main(new String[]{}); break;
-            case 6: Gafos_automatas.Automata06.main(new String[]{}); break;
-            default: System.out.println("Opción no válida.");
+            case 1:
+                Automatas.Automata1 a1 = new Automatas.Automata1();
+                a1.automata1(scanner);
+                break;
+            case 2:
+                Automatas.Automata2 a2 = new Automatas.Automata2();
+                a2.automata2(scanner);
+                break;
+            case 3:
+                Automatas.Automata3 a3 = new Automatas.Automata3();
+                a3.automata3(scanner);
+                break;
+            case 4:
+                Automatas.Automata4 a4 = new Automatas.Automata4();
+                a4.automata4(scanner);
+                break;
+            case 5:
+                Automatas.Automata5 a5 = new Automatas.Automata5();
+                a5.automata5(scanner);
+                break;
+            case 6:
+                Automatas.Automata6 a6 = new Automatas.Automata6();
+                a6.automata6(scanner);
+                break;
+            case 7:
+                Automatas.Automata7 a7 = new Automatas.Automata7();
+                a7.automata7(scanner);
+                break;
+            default: 
+                System.out.println("Opción no válida.");
         }
     }
 }

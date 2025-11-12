@@ -1,6 +1,6 @@
 package Series_caracteres;
 
-public class Sc6 {
+public class SerieCaracter6 {
 
     public void SerieCaracteres6() {
 

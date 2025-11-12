@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class Automata3 {
 
-    public void automata3() {
+    public void automata3(Scanner sc) {
 
-        Scanner sc = new Scanner(System.in);
         System.out.print("Ingrese una cadena: ");
         String cadena = sc.nextLine();
-        sc.close();
 
         int estado = 0;
         boolean valido = true;

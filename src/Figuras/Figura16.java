@@ -3,7 +3,8 @@ package Figuras;
 import java.util.Scanner;
 
 public class Figura16 {
-    public static void main(String[] args) {
+    
+    public void figura16() {
         Scanner scanner = new Scanner(System.in);
         
         int filas = 0;
@@ -35,8 +36,6 @@ public class Figura16 {
                 columnas = 0; // Valor inválido para mantener el bucle activo
             }
         } while (columnas <= 0);
-        
-        scanner.close();
 
         System.out.println("Figura 16 usando for:");
         figura16For(filas, columnas);
@@ -51,7 +50,7 @@ public class Figura16 {
         System.out.println();
     }
 
-    public static void figura16For(int filas, int columnas){
+    public void figura16For(int filas, int columnas){
         for(int i = 0; i <= filas; i++){
             for(int j = 0; j <= columnas; j++){
                 char ch = ' ';
@@ -73,7 +72,7 @@ public class Figura16 {
     }
 
     //Figura 16 Bucle While
-    public static void figura16While(int filas, int columnas){
+    public void figura16While(int filas, int columnas){
         int i = 0;
         while(i <= filas){
             int j = 0;
@@ -101,7 +100,7 @@ public class Figura16 {
     }
 
     //Figura 16 Bucle Do While
-    public static void figura16DoWhile(int filas, int columnas){
+    public void figura16DoWhile(int filas, int columnas){
         int i = 0;
         do{
             int j = 0;

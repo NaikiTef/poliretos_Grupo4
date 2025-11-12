@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Array1 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
+    public void ejecutar(Scanner scanner) {
         System.out.println("Ingrese su nombre completo:");
         String nombreCompleto = scanner.nextLine().trim();
 
@@ -61,17 +59,15 @@ public class Array1 {
         for (int i = 0; i < palabras.length; i++) {
             imprimirBarraCarga3(porcentajes[i], palabras[i]);
         }
-
-        scanner.close();
     }
 
     // Método para validar que el nombre contenga solo letras y espacios
-    public static boolean validarSoloLetras(String texto) {
+    public boolean validarSoloLetras(String texto) {
         return texto.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+");
     }
 
     // Array 01 - Bucle For
-    public static void imprimirBarraCarga(int porcentaje, String palabra) {
+    public void imprimirBarraCarga(int porcentaje, String palabra) {
         int bloques = porcentaje / 10;
         StringBuilder barra = new StringBuilder();
 
@@ -85,7 +81,7 @@ public class Array1 {
     }
 
     // Array 01 - Bucle While
-    public static void imprimirBarraCarga2(int porcentaje, String palabra) {
+    public void imprimirBarraCarga2(int porcentaje, String palabra) {
         int bloques = porcentaje / 10;
         StringBuilder barra = new StringBuilder();
 
@@ -101,7 +97,7 @@ public class Array1 {
     }
 
     // Array 01 - Bucle Do While
-    public static void imprimirBarraCarga3(int porcentaje, String palabra) {
+    public void imprimirBarraCarga3(int porcentaje, String palabra) {
         int bloques = porcentaje / 10;
         StringBuilder barra = new StringBuilder();
 

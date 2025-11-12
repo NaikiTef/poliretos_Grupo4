@@ -1,7 +1,22 @@
-public class CadenaDeCaracter1 {
-    
+package Cadena_caracteres;
 
-    public void imprimirCadenaDeCaracter1(String s){
+import java.util.Scanner;
+
+public class CadenaDeCaracter7 {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese una cadena de texto: ");
+        String s = scanner.nextLine();
+        
+        CadenaDeCaracter7 cdc7 = new CadenaDeCaracter7();
+        cdc7.imprimirCadenaDeCaracter7(s);
+        
+        scanner.close();
+    }
+
+    public void imprimirCadenaDeCaracter7(String s){
         System.out.println(" ");
         System.out.println("Cadena De Caracter Uno:");
         System.out.println("Cadena Original:"+s);
@@ -64,5 +79,5 @@ public class CadenaDeCaracter1 {
                 System.out.println(new String(chars).toUpperCase());
                 System.out.println(" ");
     }
-    }
+}
 

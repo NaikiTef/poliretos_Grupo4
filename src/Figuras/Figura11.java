@@ -1,6 +1,16 @@
+package Figuras;
+
+import java.util.Scanner;
 
 public class Figura11 {
     int numeroAvanza;
+
+    public void figura11() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el tamaño de la figura: ");
+        int n = scanner.nextInt();
+        imprimirFigura11(n);
+    }
 
     public void imprimirFigura11(Integer n){
         numeroAvanza=1;

@@ -6,11 +6,11 @@ public class A03 {
 
     public static void main(String[] args) {
         A03 ejercicio = new A03();
-        ejercicio.array3();
+        Scanner scanner = new Scanner(System.in);
+        ejercicio.array3(scanner);
     }
 
-    public void array3() {
-        Scanner scanner = new Scanner(System.in);
+    public void array3(Scanner scanner) {
         System.out.print("Ingrese una palabra: ");
         String n = scanner.nextLine();
 
@@ -42,7 +42,6 @@ public class A03 {
             tamanioNombre--;
         } while (contador <= tamanioNombre);
         tamanioNombre = nombre.length();
-        scanner.close();
     }
 
 }

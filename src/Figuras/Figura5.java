@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Figura5 {
 
-     public static void main(String[] args) {
+    public void figura5() {
         Scanner scanner = new Scanner(System.in);
         // No necesitas columnas en este caso, ya que la figura depende solo del número de filas.
 
@@ -23,8 +23,6 @@ public class Figura5 {
             }
         } while (filas <= 0);
 
-        scanner.close();
-
         System.out.println("\nFigura 5 usando FOR:");
         figura5For(filas);
         System.out.println();
@@ -39,7 +37,7 @@ public class Figura5 {
     }
 
     // Figura con FOR (pirámide invertida centrada)
-    public static void figura5For(int filas) {
+    public void figura5For(int filas) {
         for (int i = 0; i < filas; i++) {
             // Espacios
             for (int e = 0; e < i; e++) {
@@ -54,7 +52,7 @@ public class Figura5 {
     }
 
     // Figura con WHILE
-    public static void figura5While(int filas) {
+    public void figura5While(int filas) {
         int i = 0;
         while (i < filas) {
             int e = 0;
@@ -75,7 +73,7 @@ public class Figura5 {
     }
 
     // Figura con DO WHILE
-    public static void figura5DoWhile(int filas) {
+    public void figura5DoWhile(int filas) {
         int i = 0;
         do {
             int e = 0;

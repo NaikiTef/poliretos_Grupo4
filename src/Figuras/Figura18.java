@@ -3,7 +3,8 @@ package Figuras;
 import java.util.Scanner;
 
 public class Figura18 {
-    public static void main(String[] args){
+    
+    public void figura18() {
         Scanner scanner = new Scanner(System.in);
         
         int nivel = 0;
@@ -19,8 +20,6 @@ public class Figura18 {
                 nivel = 0; 
             }
         }while(nivel <= 0);
-        
-        scanner.close();
 
         System.out.println("Figura 18 usando for:");
         figura18For(nivel);
@@ -35,7 +34,7 @@ public class Figura18 {
         System.out.println();
     }
 
-    public static void figura18For(int nivel) {
+    public void figura18For(int nivel) {
 
         int[][] triangulo = new int[nivel + 1][nivel + 1]; // ← aquí va !
 
@@ -61,7 +60,7 @@ public class Figura18 {
         }
     }
 
-    public static void figura18While(int nivel) {
+    public void figura18While(int nivel) {
         int[][] triangulo = new int[nivel + 1][nivel + 1];
 
         int i = 0;
@@ -91,7 +90,7 @@ public class Figura18 {
         }
     }
 
-    public static void figura18DoWhile(int nivel) {
+    public void figura18DoWhile(int nivel) {
         int[][] triangulo = new int[nivel + 1][nivel + 1];
 
         int i = 0;

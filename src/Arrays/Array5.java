@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Array5 {
 
-    public void array3() {
-        Scanner scanner = new Scanner(System.in);
+    public void array3(Scanner scanner) {
         System.out.print("Ingrese un nombre: ");
         String n = scanner.nextLine();
 
@@ -37,7 +36,6 @@ public class Array5 {
             tamanioNombre--;
         } while (contador <= tamanioNombre);
         tamanioNombre = nombre.length();
-        scanner.close();
     }
 
 }

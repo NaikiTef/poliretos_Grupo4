@@ -50,7 +50,6 @@ public class Figura9 {
         } while (contador <= tamanio);
         contador = 1;
         copiaTamanio = tamanio;
-        scanner.close();
     }
 
 }

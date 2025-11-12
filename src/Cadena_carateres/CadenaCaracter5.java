@@ -2,7 +2,7 @@ package Cadena_carateres;
 
 import java.util.Scanner;
 
-public class C06 {
+public class CadenaCaracter5 {
 
     public void cadenaCaracter6() {
 

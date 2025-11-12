@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Array2 {
     
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public void ejecutar(Scanner scanner) {
 
         // 1️ Pedir nombre completo y validar
         String nombreCompleto;
@@ -56,12 +55,10 @@ public class Array2 {
         char letra2 = iniciales.length() > 1 ? iniciales.charAt(1) : ' ';
 
         dibujarIniciales(letra1, letra2, tamaño, caracter);
-
-        scanner.close();
     }
 
     // Validar nombre
-    public static boolean esValidaCadena(String cadena) {
+    public boolean esValidaCadena(String cadena) {
         if (cadena == null || cadena.trim().isEmpty()) {
             return false;
         }
@@ -74,7 +71,7 @@ public class Array2 {
     }
 
     //  Obtener iniciales (máximo dos letras)
-    public static String obtenerIniciales(String nombreCompleto) {
+    public String obtenerIniciales(String nombreCompleto) {
         String[] partes = nombreCompleto.trim().split("\\s+");
         StringBuilder iniciales = new StringBuilder();
 
@@ -89,12 +86,12 @@ public class Array2 {
     }
 
     //  Validar el carácter ingresado
-    public static boolean esCaracterValido(String c) {
+    public boolean esCaracterValido(String c) {
         return c != null && c.length() == 1 && !Character.isWhitespace(c.charAt(0));
     }
 
     //  Dibujar las iniciales
-    public static void dibujarIniciales(char l1, char l2, int n, String c) {
+    public void dibujarIniciales(char l1, char l2, int n, String c) {
         for (int i = 0; i < n; i++) {
             dibujarLetra(l1, n, c, i);
             System.out.print("   "); // espacio entre letras
@@ -106,7 +103,7 @@ public class Array2 {
     }
 
     //  Dibujar cada letra según la inicial
-    public static void dibujarLetra(char letra, int n, String c, int fila) {
+    public void dibujarLetra(char letra, int n, String c, int fila) {
         letra = Character.toUpperCase(letra);
 
         switch (letra) {

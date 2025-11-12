@@ -3,7 +3,8 @@ package Cadena_caracteres;
 import java.util.Scanner;
 
 public class CadenaCaracter1 {
-    public static void main(String[] args) {
+    
+    public void cadenaCaracter1() {
         Scanner scanner = new Scanner(System.in);
         
         // Validar que solo se ingresen letras
@@ -15,8 +16,6 @@ public class CadenaCaracter1 {
                 System.out.println("Error: Solo se permiten letras. Intente nuevamente.");
             }
         } while (!esValidaCadena(cadena));
-        
-        scanner.close();
 
         int contadorFor = contarVocalesFor(cadena);
         System.out.println("Número total de vocales usando for: " + contadorFor);
