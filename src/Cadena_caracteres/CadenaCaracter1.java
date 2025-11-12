@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class CadenaCaracter1 {
     
-    public void cadenaCaracter1() {
-        Scanner scanner = new Scanner(System.in);
+    public void cadenaCaracter1(Scanner scanner) {
         
         // Validar que solo se ingresen letras
         String cadena;

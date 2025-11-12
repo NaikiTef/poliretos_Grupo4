@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Figura17 {
     
-    public void figura17() {
-        Scanner scanner = new Scanner(System.in);
+    public void figura17(Scanner scanner) {
 
         int filas = 0;
         do{

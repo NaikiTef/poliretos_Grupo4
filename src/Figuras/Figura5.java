@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Figura5 {
 
-    public void figura5() {
-        Scanner scanner = new Scanner(System.in);
+    public void figura5(Scanner scanner) {
         // No necesitas columnas en este caso, ya que la figura depende solo del número de filas.
 
         int filas = 0;

@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Figura6 {
 
-    public void figura6() {
-        Scanner scanner = new Scanner(System.in);
+    public void figura6(Scanner scanner) {
 
         int filas = 0;
         // Validación para filas: solo números mayores a 0

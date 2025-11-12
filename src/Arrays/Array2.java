@@ -49,12 +49,37 @@ public class Array2 {
 
         // 4 Mostrar las iniciales y dibujar la matriz
         System.out.println("\nIniciales detectadas: " + iniciales);
-        System.out.println("Matriz generada:\n");
+        System.out.println("¿Qué variante desea usar para dibujar la matriz?");
+        System.out.println("1. for");
+        System.out.println("2. while");
+        System.out.println("3. do-while");
+        int variante = 0;
+        do {
+            System.out.print("Seleccione una opción (1-3): ");
+            if (scanner.hasNextInt()) {
+                variante = scanner.nextInt();
+                scanner.nextLine();
+            } else {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+                scanner.next();
+            }
+        } while (variante < 1 || variante > 3);
 
         char letra1 = iniciales.charAt(0);
         char letra2 = iniciales.length() > 1 ? iniciales.charAt(1) : ' ';
 
-        dibujarIniciales(letra1, letra2, tamaño, caracter);
+        System.out.println("Matriz generada:\n");
+        switch (variante) {
+            case 1:
+                dibujarInicialesFor(letra1, letra2, tamaño, caracter);
+                break;
+            case 2:
+                dibujarInicialesWhile(letra1, letra2, tamaño, caracter);
+                break;
+            case 3:
+                dibujarInicialesDoWhile(letra1, letra2, tamaño, caracter);
+                break;
+        }
     }
 
     // Validar nombre
@@ -92,13 +117,56 @@ public class Array2 {
 
     //  Dibujar las iniciales
     public void dibujarIniciales(char l1, char l2, int n, String c) {
+        // Método original (for)
         for (int i = 0; i < n; i++) {
             dibujarLetra(l1, n, c, i);
-            System.out.print("   "); // espacio entre letras
+            System.out.print("   ");
             if (l2 != ' ') {
                 dibujarLetra(l2, n, c, i);
             }
             System.out.println();
+        }
+    }
+
+    // Variante for
+    public void dibujarInicialesFor(char l1, char l2, int n, String c) {
+        for (int i = 0; i < n; i++) {
+            dibujarLetra(l1, n, c, i);
+            System.out.print("   ");
+            if (l2 != ' ') {
+                dibujarLetra(l2, n, c, i);
+            }
+            System.out.println();
+        }
+    }
+
+    // Variante while
+    public void dibujarInicialesWhile(char l1, char l2, int n, String c) {
+        int i = 0;
+        while (i < n) {
+            dibujarLetra(l1, n, c, i);
+            System.out.print("   ");
+            if (l2 != ' ') {
+                dibujarLetra(l2, n, c, i);
+            }
+            System.out.println();
+            i++;
+        }
+    }
+
+    // Variante do-while
+    public void dibujarInicialesDoWhile(char l1, char l2, int n, String c) {
+        int i = 0;
+        if (n > 0) {
+            do {
+                dibujarLetra(l1, n, c, i);
+                System.out.print("   ");
+                if (l2 != ' ') {
+                    dibujarLetra(l2, n, c, i);
+                }
+                System.out.println();
+                i++;
+            } while (i < n);
         }
     }
 

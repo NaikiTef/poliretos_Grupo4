@@ -6,12 +6,36 @@ public class SerieNumerica10 {
 
     //FOR
     public static void SerieNumericoFor(Scanner scanner){
+        long inicial = 0;
+        int numTermino = 0;
+        boolean valido = false;
         
-        System.out.print("Ingrese el número inicial: ");
-        long inicial = scanner.nextLong();
+        // Validar número inicial
+        while (!valido) {
+            try {
+                System.out.print("Ingrese el número inicial: ");
+                inicial = Long.parseLong(scanner.nextLine().trim());
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
         
-        System.out.print("Ingrese el número de veces que quiere que se repita la serie: ");
-        int numTermino = scanner.nextInt();
+        valido = false;
+        // Validar número de términos
+        while (!valido) {
+            try {
+                System.out.print("Ingrese el número de veces que quiere que se repita la serie: ");
+                numTermino = Integer.parseInt(scanner.nextLine().trim());
+                if (numTermino > 0) {
+                    valido = true;
+                } else {
+                    System.out.println("Error: El número debe ser mayor que 0.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
         
         long termino = inicial;
         
@@ -25,12 +49,36 @@ public class SerieNumerica10 {
 
     //WHILE
     public static void SerieNumericoWhile(Scanner scanner){
+        long inicial = 0;
+        int numTerminos = 0;
+        boolean valido = false;
         
-        System.out.print("\nIngrese el número inicial: ");
-        long inicial = scanner.nextLong();
+        // Validar número inicial
+        while (!valido) {
+            try {
+                System.out.print("\nIngrese el número inicial: ");
+                inicial = Long.parseLong(scanner.nextLine().trim());
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
         
-        System.out.print("Ingrese el número de veces que quiere que se repita la serie: ");
-        int numTerminos = scanner.nextInt();
+        valido = false;
+        // Validar número de términos
+        while (!valido) {
+            try {
+                System.out.print("Ingrese el número de veces que quiere que se repita la serie: ");
+                numTerminos = Integer.parseInt(scanner.nextLine().trim());
+                if (numTerminos > 0) {
+                    valido = true;
+                } else {
+                    System.out.println("Error: El número debe ser mayor que 0.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
         
         long termino = inicial;
         int i = 0;
@@ -45,12 +93,36 @@ public class SerieNumerica10 {
 
     //DO WHILE
     public static void SerieNumericoDoWhile(Scanner scanner){
+        long inicial = 0;
+        int numTerminos = 0;
+        boolean valido = false;
         
-        System.out.print("\nIngrese el número inicial: ");
-        long inicial = scanner.nextLong();
+        // Validar número inicial
+        while (!valido) {
+            try {
+                System.out.print("\nIngrese el número inicial: ");
+                inicial = Long.parseLong(scanner.nextLine().trim());
+                valido = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
         
-        System.out.print("Ingrese el número de veces que quiere que se repita la serie: ");
-        int numTerminos = scanner.nextInt();
+        valido = false;
+        // Validar número de términos
+        while (!valido) {
+            try {
+                System.out.print("Ingrese el número de veces que quiere que se repita la serie: ");
+                numTerminos = Integer.parseInt(scanner.nextLine().trim());
+                if (numTerminos > 0) {
+                    valido = true;
+                } else {
+                    System.out.println("Error: El número debe ser mayor que 0.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
         
         long termino = inicial;
         int i = 0;

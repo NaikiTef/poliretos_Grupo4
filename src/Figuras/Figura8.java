@@ -7,8 +7,23 @@ public class Figura8 {
     public void figura8() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el tamanio de la figura: ");
-        Integer tamanio = scanner.nextInt();
+        Integer tamanio = 0;
+        boolean valido = false;
+        
+        // Validar entrada
+        while (!valido) {
+            try {
+                System.out.print("Ingrese el tamanio de la figura: ");
+                tamanio = Integer.parseInt(scanner.nextLine().trim());
+                if (tamanio > 0) {
+                    valido = true;
+                } else {
+                    System.out.println("Error: El tamaño debe ser mayor que 0.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Error: Debe ingresar un número entero válido.");
+            }
+        }
 
         Integer copiaTamanio = tamanio;
         Integer contador = 1;
@@ -46,5 +61,7 @@ public class Figura8 {
         } while (contador <= copiaTamanio);
         contador = 1;
         copiaTamanio = tamanio;
+        
+        scanner.close();
     }
 }

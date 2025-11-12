@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Figura19 {
     
-    public void figura19() {
-        Scanner scanner = new Scanner(System.in);
+    public void figura19(Scanner scanner) {
         
         int nivel = 0;
         do{

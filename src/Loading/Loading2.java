@@ -6,9 +6,21 @@ import java.util.concurrent.TimeUnit;
 public class Loading2 {
 
     public void loading2(Scanner scanner) {
-        System.out.print("Ingrese un carácter para la barra de carga: ");
-        char caracter = scanner.next().charAt(0);
-        scanner.nextLine();
+        char caracter = ' ';
+        boolean valido = false;
+        
+        // Validar que se ingrese un carácter válido
+        while (!valido) {
+            System.out.print("Ingrese un carácter para la barra de carga: ");
+            String entrada = scanner.nextLine().trim();
+            
+            if (!entrada.isEmpty() && entrada.length() == 1) {
+                caracter = entrada.charAt(0);
+                valido = true;
+            } else {
+                System.out.println("Error: Debe ingresar exactamente un carácter.");
+            }
+        }
         
         System.out.println("Loading 02 --Bucle For (SIN giratorio)");
         for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {

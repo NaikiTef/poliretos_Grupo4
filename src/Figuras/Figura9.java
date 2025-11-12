@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Figura9 {
 
-    public void figura9() {
-        Scanner scanner = new Scanner(System.in);
+    public void figura9(Scanner scanner) {
         System.out.print("Ingrese el tamanio de la figura: ");
         Integer tamanio = scanner.nextInt();
 
