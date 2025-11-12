@@ -1,11 +1,10 @@
-package Gafos_automatas;
+package Automatas;
 
 import java.util.Scanner;
 
-public class Automara2 {
-     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
+public class Automata2 {
+     
+    public void automata2(Scanner scanner) {
         System.out.println("\n=== Prueba Manual ===");
         
         // Permitir al usuario probar sus propias cadenas
@@ -33,12 +32,10 @@ public class Automara2 {
                 }
             }
         } while (!entrada.equalsIgnoreCase("salir"));
-        
-        scanner.close();
     }
     
     // Método para validar que la cadena solo contenga a, b, c
-    public static boolean esValidaCadena(String cadena) {
+    public boolean esValidaCadena(String cadena) {
         if (cadena == null || cadena.isEmpty()) {
             return false;
         }
@@ -54,7 +51,7 @@ public class Automara2 {
     // =====================================================
     // AUTOMATA CON FOR
     // =====================================================
-    public static boolean automataFor(String cadena) {
+    public boolean automataFor(String cadena) {
         if (cadena.length() < 4 || cadena.charAt(0) != 'a') return false;
 
         int i = 1;
@@ -69,7 +66,7 @@ public class Automara2 {
     // =====================================================
     // AUTOMATA CON WHILE
     // =====================================================
-    public static boolean automataWhile(String cadena) {
+    public boolean automataWhile(String cadena) {
         if (cadena.length() < 4 || cadena.charAt(0) != 'a') return false;
 
         int i = 1;
@@ -86,7 +83,7 @@ public class Automara2 {
     // =====================================================
     // AUTOMATA CON DO-WHILE
     // =====================================================
-    public static boolean automataDoWhile(String cadena) {
+    public boolean automataDoWhile(String cadena) {
         if (cadena.length() < 4 || cadena.charAt(0) != 'a') return false;
 
         int i = 1;

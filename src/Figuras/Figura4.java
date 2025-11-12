@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Figura4 {
 
-public static void main(String[] args) {
+    public void figura4() {
         Scanner scanner = new Scanner(System.in);
 
         int filas = 0;
@@ -36,8 +36,6 @@ public static void main(String[] args) {
             }
         } while (columnas <= 0);
 
-        scanner.close();
-
         System.out.println("\nFigura 4 usando FOR:");
         figura4For(filas, columnas);
         System.out.println();
@@ -52,7 +50,7 @@ public static void main(String[] args) {
     }
 
     // Figura con FOR
-    public static void figura4For(int filas, int columnas) {
+    public void figura4For(int filas, int columnas) {
         for (int i = 1; i <= filas; i++) {
             for (int e = columnas; e > i; e--) { // Espacios a la izquierda
                 System.out.print("  ");
@@ -65,7 +63,7 @@ public static void main(String[] args) {
     }
 
     // Figura con WHILE
-    public static void figura4While(int filas, int columnas) {
+    public void figura4While(int filas, int columnas) {
         int i = 1;
         while (i <= filas) {
             int e = columnas;
@@ -85,7 +83,7 @@ public static void main(String[] args) {
     }
 
     // Figura con DO WHILE
-    public static void figura4DoWhile(int filas, int columnas) {
+    public void figura4DoWhile(int filas, int columnas) {
         int i = 1;
         do {
             int e = columnas;

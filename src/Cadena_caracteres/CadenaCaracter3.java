@@ -3,7 +3,8 @@ package Cadena_caracteres;
 import java.util.Scanner;
 
 public class CadenaCaracter3 {
-    public static void main(String[] args) {
+    
+    public void cadenaCaracter3() {
         Scanner scanner = new Scanner(System.in);
 
         // Validar que solo se ingresen letras

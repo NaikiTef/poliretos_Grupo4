@@ -2,7 +2,8 @@ package Loading;
 import java.util.concurrent.TimeUnit;
 
 public class Loading5 {
-    public static void main(String[] args) {
+    
+    public void loading5() {
         System.out.println("L05 -- Bucle For");
         for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {
             mostrarBarraFor(porcentaje);

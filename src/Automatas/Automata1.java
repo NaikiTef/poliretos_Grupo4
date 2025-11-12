@@ -1,11 +1,10 @@
-package Gafos_automatas;
+package Automatas;
 
 import java.util.Scanner;
 
 public class Automata1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
+    
+    public void automata1(Scanner scanner) {
         System.out.println("\n=== Prueba Manual ===");
         
         // Permitir al usuario probar sus propias cadenas
@@ -16,19 +15,17 @@ public class Automata1 {
             
             if (!entrada.equalsIgnoreCase("salir")) {
                 if (esValidaCadena(entrada)) {
-                    boolean resultado = automata1(entrada);
+                    boolean resultado = validarCadena(entrada);
                     System.out.println("La cadena \"" + entrada + "\" es " + (resultado ? "aceptada" : "rechazada") + " por el autómata.");
                 } else {
                     System.out.println("Error: La cadena solo puede contener las letras 'a', 'b' y 'c'.");
                 }
             }
         } while (!entrada.equalsIgnoreCase("salir"));
-        
-        scanner.close();
     }
     
     // Método para validar que la cadena solo contenga a, b, c
-    public static boolean esValidaCadena(String cadena) {
+    public boolean esValidaCadena(String cadena) {
         if (cadena == null || cadena.isEmpty()) {
             return false;
         }
@@ -41,7 +38,7 @@ public class Automata1 {
         return true;
     }
 
-    public static boolean automata1(String cadena) {
+    public boolean validarCadena(String cadena) {
         int estadoActual = 0;
         for (int i = 0; i < cadena.length(); i++) {
             char simbolo = cadena.charAt(i);

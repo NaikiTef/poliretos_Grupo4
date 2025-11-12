@@ -3,8 +3,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.Scanner;
 
 public class Loading3 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    
+    public void loading3(Scanner sc) {
         char caracter;
 
         //  Validar el carácter
