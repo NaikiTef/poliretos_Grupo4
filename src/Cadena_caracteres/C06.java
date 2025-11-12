@@ -1,3 +1,5 @@
+package Cadena_caracteres;
+
 import java.util.Scanner;
 
 public class C06 {
@@ -62,3 +64,4 @@ public class C06 {
     }
 
 }
+
