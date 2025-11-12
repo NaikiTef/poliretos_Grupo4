@@ -1,3 +1,5 @@
+package Arrays;
+
 import java.util.Scanner;
 
 public class A03 {
@@ -39,3 +41,4 @@ public class A03 {
     }
 
 }
+
