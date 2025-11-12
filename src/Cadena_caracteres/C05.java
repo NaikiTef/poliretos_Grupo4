@@ -1,4 +1,4 @@
-package Arrays;
+package Cadena_caracteres;
 
 import java.util.Scanner;
 
@@ -63,4 +63,5 @@ public class C05 {
     }
 
 }
+
 
