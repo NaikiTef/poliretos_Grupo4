@@ -1,3 +1,5 @@
+package Figuras;
+
 public class F7 {
 
     public void figura7() {

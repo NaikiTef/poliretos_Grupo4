@@ -4,6 +4,11 @@ import java.util.Scanner;
 
 public class A03 {
 
+    public static void main(String[] args) {
+        A03 ejercicio = new A03();
+        ejercicio.array3();
+    }
+
     public void array3() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese una palabra: ");

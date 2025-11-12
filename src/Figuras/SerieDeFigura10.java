@@ -1,4 +1,4 @@
-package pkserie.Figuras;
+package Figuras;
 
 
 public class SerieDeFigura10 {

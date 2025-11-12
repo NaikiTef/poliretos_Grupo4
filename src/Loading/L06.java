@@ -1,3 +1,5 @@
+package Loading;
+
 public class L06 {
 
     public void Loading6() {

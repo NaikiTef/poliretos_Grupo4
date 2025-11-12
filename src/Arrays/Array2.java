@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Array2 {
     
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         // 1️ Pedir nombre completo y validar
@@ -110,26 +110,6 @@ public class Array2 {
         letra = Character.toUpperCase(letra);
 
         switch (letra) {
-            case 'E':
-                for (int j = 0; j < n; j++) {
-                    if (fila == 0 || fila == n / 2 || fila == n - 1 || j == 0) {
-                        System.out.print(c);
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
-                break;
-
-            case 'P':
-                for (int j = 0; j < n; j++) {
-                    if (j == 0 || fila == 0 || fila == n / 2 || (j == n - 1 && fila < n / 2)) {
-                        System.out.print(c);
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
-                break;
-
             case 'A':
                 for (int j = 0; j < n; j++) {
                     if (fila == 0 || fila == n / 2 || j == 0 || j == n - 1) {
@@ -140,9 +120,69 @@ public class Array2 {
                 }
                 break;
 
-            case 'R':
+            case 'B':
                 for (int j = 0; j < n; j++) {
-                    if (j == 0 || fila == 0 || fila == n / 2 || (j == n - 1 && fila < n / 2) || (j == fila - n / 2 && fila > n / 2)) {
+                    if (j == 0 || fila == 0 || fila == n / 2 || fila == n - 1 || (j == n - 1 && fila != n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'C':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n - 1 || j == 0) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'D':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || fila == 0 || fila == n - 1 || (j == n - 1 && fila != 0 && fila != n - 1)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'E':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n / 2 || fila == n - 1 || j == 0) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'F':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n / 2 || j == 0) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'G':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n - 1 || j == 0 || (j == n - 1 && fila >= n / 2) || (fila == n / 2 && j >= n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'H':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || j == n - 1 || fila == n / 2) {
                         System.out.print(c);
                     } else {
                         System.out.print(" ");
@@ -160,8 +200,178 @@ public class Array2 {
                 }
                 break;
 
+            case 'J':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || j == n / 2 || (fila == n - 1 && j <= n / 2) || (j == 0 && fila >= n - 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'K':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || (j == n - 1 - fila && fila <= n / 2) || (j == fila - n / 2 && fila >= n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'L':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || fila == n - 1) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'M':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || j == n - 1 || (j == fila && fila <= n / 2) || (j == n - 1 - fila && fila <= n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'N':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || j == n - 1 || j == fila) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'O':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n - 1 || j == 0 || j == n - 1) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'P':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || fila == 0 || fila == n / 2 || (j == n - 1 && fila < n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'Q':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n - 1 || j == 0 || j == n - 1 || (j == fila && fila >= n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'R':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || fila == 0 || fila == n / 2 || (j == n - 1 && fila < n / 2) || (j == fila - n / 2 && fila > n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'S':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n / 2 || fila == n - 1 || (j == 0 && fila < n / 2) || (j == n - 1 && fila > n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'T':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || j == n / 2) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'U':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || j == n - 1 || fila == n - 1) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'V':
+                for (int j = 0; j < n; j++) {
+                    if ((j == 0 && fila < n - 1) || (j == n - 1 && fila < n - 1) || (j == n / 2 && fila == n - 1)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'W':
+                for (int j = 0; j < n; j++) {
+                    if (j == 0 || j == n - 1 || (j == fila && fila >= n / 2) || (j == n - 1 - fila && fila >= n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'X':
+                for (int j = 0; j < n; j++) {
+                    if (j == fila || j == n - 1 - fila) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'Y':
+                for (int j = 0; j < n; j++) {
+                    if ((j == fila && fila <= n / 2) || (j == n - 1 - fila && fila <= n / 2) || (j == n / 2 && fila > n / 2)) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
+            case 'Z':
+                for (int j = 0; j < n; j++) {
+                    if (fila == 0 || fila == n - 1 || j == n - 1 - fila) {
+                        System.out.print(c);
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+                break;
+
             default:
-                // Si la inicial no tiene patrón, se muestra un cuadrado
+                // Si la letra no está definida, se muestra un cuadrado
                 for (int j = 0; j < n; j++) {
                     if (fila == 0 || fila == n - 1 || j == 0 || j == n - 1) {
                         System.out.print(c);

@@ -1,3 +1,5 @@
+package Figuras;
+
 public class F8 {
 
     public void figura8() {

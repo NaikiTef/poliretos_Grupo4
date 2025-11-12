@@ -1,4 +1,4 @@
-package pkserie.pkSeriesNumericas;
+package Series_numericas;
 
 public class SerieNumerica7 {
     public Integer numeroAvanza;

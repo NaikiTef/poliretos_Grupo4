@@ -1,10 +1,7 @@
-
-public class App {
-
-    public static void main(String[] args) {
-
-        Controlador Controlador1 = new Controlador();
-        Controlador1.iniciar();
-
-    }
-}
+public class App {  
+  
+    public static void main(String[] args) {  
+        Controller controlador = new Controller();  
+        controlador.iniciar();  
+    }  
+} 

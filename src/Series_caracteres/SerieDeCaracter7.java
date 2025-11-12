@@ -1,4 +1,4 @@
-package pkserie.pkSeriesAlfabeticas;
+package Series_caracteres;
 
 public class SerieDeCaracter7 {
 

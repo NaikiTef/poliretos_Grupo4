@@ -1,3 +1,5 @@
+package Series_caracteres;
+
 public class Sc5 {
 
     public void serieCaracteres5() {

@@ -1,3 +1,5 @@
+package Figuras;
+
 public class Figura12 {
 
     public void imprimirFigura12(Integer n){
