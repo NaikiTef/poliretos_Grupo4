@@ -13,11 +13,10 @@ public class Loading12 {
     }
 
     private static void limpiarPantalla() {
-        for (int i = 0; i < 15; i++) {
+        for (int i = 1; i < 15; i++) {
             System.out.println();
         }
     }
-
     
     public static void LoadingFor(Scanner scanner) throws InterruptedException{
                 
@@ -28,20 +27,24 @@ public class Loading12 {
         };
 
         int maxDesplazamiento = 15; 
-        int delay = 150; 
+        int delay = 100; 
         
         for (int rep = 0; rep < 1; rep++) {
             //IZQUIERDA A DERECHA
             for (int espacio = 0; espacio <= maxDesplazamiento; espacio++) {
+                limpiarPantalla();
                 imprimirFiguraConEspacios(figura, espacio);
                 Thread.sleep(delay);
                 limpiarPantalla();
+
             }
             //DERECHA A IZQUIERDA
             for (int espacio = maxDesplazamiento - 1; espacio >= 0; espacio--) {
+                limpiarPantalla();
                 imprimirFiguraConEspacios(figura, espacio);
                 Thread.sleep(delay);
                 limpiarPantalla();
+
             }
         }
         System.out.print("\n================================================================\n");
@@ -63,16 +66,16 @@ public class Loading12 {
             int espacio = 0;
             // Avanzar a la derecha
             while (espacio <= maxDesplazamiento) {
+                limpiarPantalla();
                 imprimirFiguraConEspacios(figura, espacio);
                 Thread.sleep(delay);
-                limpiarPantalla();
                 espacio++;
             }
             espacio = maxDesplazamiento - 1;
             while (espacio >= 0) {
+                limpiarPantalla();
                 imprimirFiguraConEspacios(figura, espacio);
                 Thread.sleep(delay);
-                limpiarPantalla();
                 espacio--;
             }
             rep++;
@@ -96,18 +99,18 @@ public class Loading12 {
             int espacio = 0;
             
             do{
+                limpiarPantalla();
                 imprimirFiguraConEspacios(figura, espacio);
                 Thread.sleep(delay);
-                limpiarPantalla();
                 espacio++;
             } while (espacio <= maxDesplazamiento);
             
             espacio = maxDesplazamiento - 1;
 
             do{
+                limpiarPantalla();
                 imprimirFiguraConEspacios(figura, espacio);
                 Thread.sleep(delay);
-                limpiarPantalla();
                 espacio--;
             } while (espacio >= 0);
 

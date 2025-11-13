@@ -326,6 +326,7 @@ public class Controller {
             System.out.println("4. Figura 4      5. Figura 5      6. Figura 6");
             System.out.println("7. Figura 7      8. Figura 8      9. Figura 9");
             System.out.println("10. Figura 10    11. Figura 11    12. Figura 12");
+            System.out.println("13. Figura 13    14. Figura 14    15. Figura 15");
             System.out.println("16. Figura 16    17. Figura 17    18. Figura 18");
             System.out.println("19. Figura 19");
             System.out.println("20. Salir del menú de Figuras");
@@ -364,6 +365,10 @@ public class Controller {
                     Figuras.Figura8 f8 = new Figuras.Figura8();
                     f8.figura8(scanner);
                     break;
+                case 9:
+                    Figuras.Figura9 f9 = new Figuras.Figura9();
+                    f9.figura9(scanner);
+                    break;
                 case 10:
                     Figuras.Figura10 f10 = new Figuras.Figura10();
                     int niveles10 = leerEnteroValidado("Ingrese el número de niveles: ");
@@ -376,6 +381,33 @@ public class Controller {
                 case 12: 
                     Figuras.Figura12 f12 = new Figuras.Figura12();
                     f12.figura12(scanner);
+                    break;
+                case 13:
+                    Figuras.Figura13 f13 = new Figuras.Figura13();
+                    System.out.println("Figura 13: For");
+                    f13.figuraFor(scanner);
+                    System.out.println("Figura 13: While");
+                    f13.figuraWhile(scanner);
+                    System.out.println("Figura 13: Do While");
+                    f13.figuraDoWhile(scanner);
+                    break;
+                case 14:
+                    Figuras.Figura14 f14 = new Figuras.Figura14();
+                    System.out.println("Figura 14: For");
+                    f14.figuraFor(scanner);
+                    System.out.println("Figura 14: While");
+                    f14.figuraWhile(scanner);
+                    System.out.println("Figura 14: Do While");
+                    f14.figuraDoWhile(scanner);
+                    break;
+                case 15:
+                    Figuras.Figura15 f15 = new Figuras.Figura15();
+                    System.out.println("Figura 15: For");
+                    f15.figuraFor(scanner);
+                    System.out.println("Figura 15: While");
+                    f15.figuraWhile(scanner);
+                    System.out.println("Figura 15: Do While");
+                    f15.figuraDoWhile(scanner);
                     break;
                 case 16: 
                     Figuras.Figura16 f16 = new Figuras.Figura16();
@@ -458,14 +490,10 @@ public class Controller {
                 case 7:
                     Cadena_caracteres.CadenaDeCaracter7 cdc7 = new Cadena_caracteres.CadenaDeCaracter7();
                     System.out.print("Ingrese una cadena de texto: ");
-                    String s7 = scanner.nextLine();
-                    cdc7.imprimirCadenaDeCaracter7(s7);
+                    cdc7.imprimirCadenaDeCaracter7(scanner.nextLine());
                     break;
                 case 8:
-                    Cadena_caracteres.CadenaDeCaracter8 cdc8 = new Cadena_caracteres.CadenaDeCaracter8();
-                    System.out.print("Ingrese una cadena de texto: ");
-                    String s8 = scanner.nextLine();
-                    cdc8.imprimirCadenaDeCaracter8(s8);
+                    menuCadenaCaracter8(scanner);
                     break;
                 case 9:
                     System.out.println("Cadena Carácter 9: Bucle For");
@@ -479,11 +507,11 @@ public class Controller {
                     continuar = false;
                     System.out.println("Saliendo del menú de Cadenas de Caracteres...");
                     break;
-                default: 
+                default:
                     System.out.println("Opción no válida. Por favor seleccione una opción del 1 al 10.");
             }
             if (continuar) {
-                System.out.println("¿Desea continuar probando más clases de Cadenas de Caracteres? (s/n)");
+                System.out.println("¿Desea continuar probando más clases de Cadenas? (s/n)");
                 String respuesta = scanner.nextLine().trim().toLowerCase();
                 if (!respuesta.equals("s")) {
                     continuar = false;
@@ -493,122 +521,32 @@ public class Controller {
         }
     }
 
-    // Menú de Arrays
-    private void menuArrays() {
-        System.out.println("\n╔════════════════════════════════════════╗");
-        System.out.println("║            ARRAYS                      ║");
-        System.out.println("╚════════════════════════════════════════╝");
+    // Menú para CadenaCaracter8 con variantes
+    private void menuCadenaCaracter8(Scanner scanner) {
         boolean continuar = true;
+        CadenaCaracter8 obj = new CadenaCaracter8();
         while (continuar) {
-            System.out.println("1. Array 1");
-            System.out.println("2. Array 2 (Iniciales)");
-            System.out.println("3. Array 3 (A03)");
-            System.out.println("4. Array 4");
-            System.out.println("5. Array 5");
-            System.out.println("6. Salir del menú de Arrays");
-            System.out.println("────────────────────────────────────────");
+            System.out.println("\n--- CadenaCaracter8: Elija variante ---");
+            System.out.println("1. For");
+            System.out.println("2. While");
+            System.out.println("3. Do-While");
+            System.out.println("4. Regresar");
             int opcion = leerEnteroValidado("Seleccione una opción: ");
             switch (opcion) {
                 case 1:
-                    new Arrays.Array1().ejecutar(scanner);
+                    obj.cadenaCaracterFor(scanner);
                     break;
                 case 2:
-                        new Arrays.Array2().ejecutar(scanner);
-                        scanner.nextLine(); // Limpiar buffer después de Array2
-                        break;
+                    obj.cadenaCaracterWhile(scanner);
+                    break;
                 case 3:
-                    new Arrays.A03().array3(scanner);
+                    obj.cadenaCaracterDoWhile(scanner);
                     break;
                 case 4:
-                    Arrays.Array04 a04 = new Arrays.Array04();
-                    System.out.print("Ingrese un texto: ");
-                    String texto = scanner.nextLine();
-                    a04.imprimirArray04(texto);
-                    break;
-                case 5:
-                    try {
-                        java.util.Random random = new java.util.Random();
-                        System.out.println("Array 5: Bucle For");
-                        Arrays.Array5.ArrayFor(scanner, random);
-                        System.out.println("\nArray 5: Bucle While");
-                        Arrays.Array5.ArrayWhile(scanner, random);
-                        System.out.println("\nArray 5: Bucle Do While");
-                        Arrays.Array5.ArrayDoWhile(scanner, random);
-                    } catch (InterruptedException e) {
-                        System.out.println("Error en animación: " + e.getMessage());
-                    }
-                    break;
-                case 6:
                     continuar = false;
-                    System.out.println("Saliendo del menú de Arrays...");
                     break;
                 default:
-                    System.out.println("Opción no válida. Por favor seleccione una opción del 1 al 6.");
-            }
-            if (continuar) {
-                System.out.println("¿Desea continuar probando más clases de Arrays? (s/n)");
-                String respuesta = scanner.nextLine().trim().toLowerCase();
-                if (!respuesta.equals("s")) {
-                    continuar = false;
-                    System.out.println("Saliendo del menú de Arrays...");
-                }
-            }
-        }
-    // Fin del método menuArrays
-    }
-
-    // Menú de Recursión
-    private void menuRecursion() {
-        boolean continuar = true;
-        while (continuar) {
-            System.out.println("\n=== RECURSIÓN ===");
-            System.out.println("1. Recursión 1");
-            System.out.println("2. Recursión 2");
-            System.out.println("3. Recursión 3");
-            System.out.println("5. Recursión 5");
-            System.out.println("6. Recursión 6 (Conteo Regresivo)");
-            System.out.println("7. Salir del menú de Recursión");
-            int opcion = leerEnteroValidado("Seleccione: ");
-            switch (opcion) {
-                case 1:
-                    Recursion.Recursion1 r1 = new Recursion.Recursion1();
-                    r1.recursion1(scanner);
-                    break;
-                case 2:
-                    Recursion.Recursion2 r2 = new Recursion.Recursion2();
-                    r2.recursion2(scanner);
-                    break;
-                case 3:
-                    Recursion.Recursion3 r3 = new Recursion.Recursion3();
-                    r3.recursion3();
-                    break;
-                case 5:
-                    Recursion.Recursion5 r5 = new Recursion.Recursion5();
-                    r5.recursion5(scanner);
-                    break;
-                case 6:
-                    Recursion.Recursion6 r6 = new Recursion.Recursion6();
-                    int n6 = r6.pedirNumero("Ingrese un número para el conteo regresivo: ");
-                    System.out.println("\nConteo Regresivo - Versión Recursiva:");
-                    r6.g2_conteo_regresivo(n6);
-                    System.out.println("\nConteo Regresivo - Versión For:");
-                    r6.g2_conteo_regresivo_for(n6);
-                    System.out.println("\nConteo Regresivo - Versión While:");
-                    r6.g2_conteo_regresivo_while(n6);
-                    break;
-                case 7:
-                    continuar = false;
-                    System.out.println("Saliendo del menú de Recursión...");
-                    break;
-                default: System.out.println("Opción no válida.");
-            }
-            if (continuar) {
-                System.out.println("¿Desea continuar probando más clases de Recursión? (s/n)");
-                String respuesta = scanner.nextLine().trim().toLowerCase();
-                if (!respuesta.equals("s")) {
-                    continuar = false;
-                    System.out.println("Saliendo del menú de Recursión...");
-                }
+                    System.out.println("Opción inválida");
             }
         }
     }
@@ -684,7 +622,8 @@ public class Controller {
             System.out.println("7. Loading 6     8. Loading 7    9. Loading 8");
             System.out.println("10. Loading 9    11. Loading 10  12. Loading 11");
             System.out.println("13. Loading 12");
-            System.out.println("14. Salir del menú de Loading");
+            System.out.println("14. Loading 13");
+            System.out.println("15. Salir del menú de Loading");
             System.out.println("────────────────────────────────────────");
             int opcion = leerEnteroValidado("Seleccione una opción: ");
             switch (opcion) {
@@ -739,10 +678,48 @@ public class Controller {
                     int valor11 = leerEnteroValidado("");
                     l11.loading11(valor11);
                     break;
+                case 13:
+                    try {
+                        System.out.println("Loading 12: For");
+                        Loading.Loading12.LoadingFor(scanner);
+                        System.out.println("Loading 12: While");
+                        Loading.Loading12.LoadingWhile(scanner);
+                        System.out.println("Loading 12: Do While");
+                        Loading.Loading12.LoadingDoWhile(scanner);
+                    } catch (InterruptedException e) {
+                        System.out.println("Error en animación: " + e.getMessage());
+                    }
+                    break;
+                case 14:
+                    try {
+                        java.util.Random random = new java.util.Random();
+                        System.out.println("Loading 13: For");
+                        Loading.Loading13.LoadingFor(scanner, random);
+                        System.out.println("Loading 13: While");
+                        Loading.Loading13.LoadingWhile(scanner, random);
+                        System.out.println("Loading 13: Do While");
+                        Loading.Loading13.LoadingDoWhile(scanner, random);
+                    } catch (InterruptedException e) {
+                        System.out.println("Error en animación: " + e.getMessage());
+                    }
+                    break;
+                case 15:
+                    continuar = false;
+                    System.out.println("Saliendo del menú de Loading...");
+                    break;
                 // Eliminados casos duplicados y código innecesario
-                // ...existing code...
             }
         }
+    }
+
+    // Método vacío temporal para Arrays
+    private void menuArrays() {
+        System.out.println("[MENÚ ARRAYS] (implementación pendiente)");
+    }
+
+    // Método vacío temporal para Recursión
+    private void menuRecursion() {
+        System.out.println("[MENÚ RECURSIÓN] (implementación pendiente)");
     }
 
     public static void main(String[] args) {
