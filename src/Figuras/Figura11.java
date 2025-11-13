@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Figura11 {
     int numeroAvanza;
 
-    public void figura11() {
-        Scanner scanner = new Scanner(System.in);
+    public void figura11(Scanner scanner) {
         int n = 0;
         boolean valido = false;
         

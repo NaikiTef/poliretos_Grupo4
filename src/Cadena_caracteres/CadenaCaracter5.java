@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class CadenaCaracter5 {
 
-    public void cadenaCaracter6() {
-
-        Scanner scanner = new Scanner(System.in);
+    public void cadenaCaracter6(Scanner scanner) {
         System.out.print("Ingrese una palabra: ");
         String palabra = scanner.nextLine();
 
@@ -60,7 +58,7 @@ public class CadenaCaracter5 {
         } while (contador <= palabra.length());
         contador = 1;
         tamanio = palabra.length();
-        scanner.close();
+        // No cerrar el scanner
     }
 
 }

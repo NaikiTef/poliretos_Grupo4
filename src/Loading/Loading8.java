@@ -1,9 +1,13 @@
 package Loading;
 
-public class Loading8 {
+import java.util.Scanner;
 
-    public void loading8() {
-        String nombre = "Justin Pincay";
+public class Loading8 {
+    public void loading8(Scanner scanner) {
+        System.out.print("Ingrese un nombre: ");
+        String n = scanner.nextLine();
+        String nombre = n.trim();
+
         String pedazoNombre;
         Integer espacios = nombre.length() - 1;
         Float porcentaje = 0.0f;

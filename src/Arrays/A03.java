@@ -4,17 +4,11 @@ import java.util.Scanner;
 
 public class A03 {
 
-    public static void main(String[] args) {
-        A03 ejercicio = new A03();
-        Scanner scanner = new Scanner(System.in);
-        ejercicio.array3(scanner);
-    }
+    // Eliminar main innecesario
 
     public void array3(Scanner scanner) {
         System.out.print("Ingrese una palabra: ");
-        String n = scanner.nextLine();
-
-        String nombre = n.trim();
+        String nombre = scanner.nextLine().trim();
         Character letra;
         Integer contador = 1;
         Integer tamanioNombre = nombre.length();

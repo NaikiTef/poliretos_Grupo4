@@ -4,17 +4,7 @@ import java.util.Scanner;
 
 public class CadenaDeCaracter7 {
     
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
-        System.out.print("Ingrese una cadena de texto: ");
-        String s = scanner.nextLine();
-        
-        CadenaDeCaracter7 cdc7 = new CadenaDeCaracter7();
-        cdc7.imprimirCadenaDeCaracter7(s);
-        
-        scanner.close();
-    }
+    // Eliminar main innecesario
 
     public void imprimirCadenaDeCaracter7(String s){
         System.out.println(" ");

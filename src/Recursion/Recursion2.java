@@ -33,7 +33,7 @@ public class Recursion2 {
         } while (!entradaValida);
 
         System.out.println("La suma recursiva de " + a + " + " + b + " es: " + suma(a, b));
-        scanner.close();
+        // No cerrar el scanner
     }
 
     public static int suma(int a, int b) {

@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 public class Automata3 {
 
-    public void automata3(Scanner sc) {
-
+    public void automata3(Scanner scanner) {
         System.out.print("Ingrese una cadena: ");
-        String cadena = sc.nextLine();
+        String cadena = scanner.nextLine();
 
         int estado = 0;
         boolean valido = true;
@@ -47,6 +46,8 @@ public class Automata3 {
         else
             System.out.println("Cadena inválida");
 
+        estado = 0;
+
         System.out.println("A03 con while");
         while (contador < cadena.length()) {
             char c = cadena.charAt(contador);
@@ -80,6 +81,8 @@ public class Automata3 {
             System.out.println("Cadena válida");
         else
             System.out.println("Cadena inválida");
+        estado = 0;
+        contador = 0;
 
         System.out.println("A03 con do while");
         do {
@@ -115,6 +118,9 @@ public class Automata3 {
             System.out.println("Cadena válida");
         else
             System.out.println("Cadena inválida");
+
+        estado = 0;
+        contador = 0;
 
     }
 

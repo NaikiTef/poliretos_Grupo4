@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Figura8 {
 
-    public void figura8() {
-
-        Scanner scanner = new Scanner(System.in);
+    public void figura8(Scanner scanner) {
         Integer tamanio = 0;
         boolean valido = false;
         

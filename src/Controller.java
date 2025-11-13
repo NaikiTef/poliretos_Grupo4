@@ -1,4 +1,9 @@
 import java.util.Scanner;
+import Series_numericas.*;
+import Series_caracteres.*;
+import Figuras.*;
+import Cadena_caracteres.*;
+import Arrays.*;
 
 public class Controller {
     
@@ -283,7 +288,7 @@ public class Controller {
                     break;
                 case 6:
                     Series_caracteres.Sc6 s6 = new Series_caracteres.Sc6();
-                    s6.SerieCaracteres6(); 
+                    s6.SerieCaracteres6(scanner);
                     break;
                 case 9:
                     System.out.println("Serie Carácter 9: Bucle For");
@@ -357,11 +362,7 @@ public class Controller {
                     break;
                 case 8: 
                     Figuras.Figura8 f8 = new Figuras.Figura8();
-                    f8.figura8();
-                    break;
-                case 9: 
-                    Figuras.Figura9 f9 = new Figuras.Figura9();
-                    f9.figura9(scanner);
+                    f8.figura8(scanner);
                     break;
                 case 10:
                     Figuras.Figura10 f10 = new Figuras.Figura10();
@@ -370,7 +371,7 @@ public class Controller {
                     break;
                 case 11: 
                     Figuras.Figura11 f11 = new Figuras.Figura11();
-                    f11.figura11();
+                    f11.figura11(scanner);
                     break;
                 case 12: 
                     Figuras.Figura12 f12 = new Figuras.Figura12();
@@ -455,10 +456,16 @@ public class Controller {
                     c06.cadenaCaracter6(scanner);
                     break;
                 case 7:
-                    Cadena_caracteres.CadenaDeCaracter7.main(new String[]{});
+                    Cadena_caracteres.CadenaDeCaracter7 cdc7 = new Cadena_caracteres.CadenaDeCaracter7();
+                    System.out.print("Ingrese una cadena de texto: ");
+                    String s7 = scanner.nextLine();
+                    cdc7.imprimirCadenaDeCaracter7(s7);
                     break;
                 case 8:
-                    Cadena_caracteres.CadenaDeCaracter8.main(new String[]{});
+                    Cadena_caracteres.CadenaDeCaracter8 cdc8 = new Cadena_caracteres.CadenaDeCaracter8();
+                    System.out.print("Ingrese una cadena de texto: ");
+                    String s8 = scanner.nextLine();
+                    cdc8.imprimirCadenaDeCaracter8(s8);
                     break;
                 case 9:
                     System.out.println("Cadena Carácter 9: Bucle For");
@@ -682,8 +689,7 @@ public class Controller {
             int opcion = leerEnteroValidado("Seleccione una opción: ");
             switch (opcion) {
                 case 1:
-                    Loading.Loading l0 = new Loading.Loading();
-                    l0.loadingBarra(50); // ejemplo de uso
+                    Loading.Loading.loadingBarra(50); // método estático
                     break;
                 case 2:
                     Loading.Loading1 l1 = new Loading.Loading1();
@@ -715,7 +721,7 @@ public class Controller {
                     break;
                 case 9:
                     Loading.Loading8 l8 = new Loading.Loading8();
-                    l8.loading8();
+                    l8.loading8(scanner);
                     break;
                 case 10:
                     Loading.L09 l9 = new Loading.L09();
@@ -733,44 +739,8 @@ public class Controller {
                     int valor11 = leerEnteroValidado("");
                     l11.loading11(valor11);
                     break;
-                case 13:
-                    System.out.println("Seleccione variante de Loading 12:");
-                    System.out.println("1. LoadingFor");
-                    System.out.println("2. LoadingWhile");
-                    System.out.println("3. LoadingDoWhile");
-                    int variante = leerEnteroValidado("Opción: ");
-                    try {
-                        switch (variante) {
-                            case 1:
-                                Loading.Loading12.LoadingFor(scanner);
-                                break;
-                            case 2:
-                                Loading.Loading12.LoadingWhile(scanner);
-                                break;
-                            case 3:
-                                Loading.Loading12.LoadingDoWhile(scanner);
-                                break;
-                            default:
-                                System.out.println("Opción de variante no válida.");
-                        }
-                    } catch (InterruptedException e) {
-                        System.out.println("Error en animación: " + e.getMessage());
-                    }
-                    break;
-                case 14:
-                    continuar = false;
-                    System.out.println("Saliendo del menú de Loading...");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Por favor seleccione una opción del 1 al 14.");
-            }
-            if (continuar) {
-                System.out.println("¿Desea continuar probando más clases de Loading? (s/n)");
-                String respuesta = scanner.nextLine().trim().toLowerCase();
-                if (!respuesta.equals("s")) {
-                    continuar = false;
-                    System.out.println("Saliendo del menú de Loading...");
-                }
+                // Eliminados casos duplicados y código innecesario
+                // ...existing code...
             }
         }
     }
