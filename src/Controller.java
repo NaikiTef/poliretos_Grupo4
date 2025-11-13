@@ -1,9 +1,5 @@
 import java.util.Scanner;
-import Series_numericas.*;
-import Series_caracteres.*;
-import Figuras.*;
-import Cadena_caracteres.*;
-import Arrays.*;
+import Cadena_caracteres.CadenaCaracter8;
 
 public class Controller {
     
@@ -719,7 +715,62 @@ public class Controller {
 
     // Método vacío temporal para Recursión
     private void menuRecursion() {
-        System.out.println("[MENÚ RECURSIÓN] (implementación pendiente)");
+        boolean continuar = true;
+        while (continuar) {
+            System.out.println("\n╔════════════════════════════════════════╗");
+            System.out.println("║         MENÚ DE RECURSIÓN              ║");
+            System.out.println("╚════════════════════════════════════════╝");
+            System.out.println("1. Factorial (Recursion1)");
+            System.out.println("2. Suma recursiva (Recursion2)");
+            System.out.println("3. Multiplicación recursiva (Recursion3)");
+            System.out.println("4. Conteo progresivo (Recursion5)");
+            System.out.println("5. Conteo regresivo (Recursion6)");
+            System.out.println("6. Salir del menú de Recursión");
+            System.out.println("────────────────────────────────────────");
+            int opcion = leerEnteroValidado("Seleccione una opción: ");
+            switch (opcion) {
+                case 1:
+                    Recursion.Recursion1 r1 = new Recursion.Recursion1();
+                    r1.recursion1(scanner);
+                    break;
+                case 2:
+                    Recursion.Recursion2 r2 = new Recursion.Recursion2();
+                    r2.recursion2(scanner);
+                    break;
+                case 3:
+                    Recursion.Recursion3 r3 = new Recursion.Recursion3();
+                    r3.recursion3();
+                    break;
+                case 4:
+                    Recursion.Recursion5 r5 = new Recursion.Recursion5();
+                    r5.recursion5(scanner);
+                    break;
+                case 5:
+                    Recursion.Recursion6 r6 = new Recursion.Recursion6();
+                    int n6 = r6.pedirNumero("Ingrese un número para conteo regresivo: ");
+                    System.out.println("Conteo regresivo usando recursión:");
+                    r6.g2_conteo_regresivo(n6);
+                    System.out.println("Conteo regresivo usando for:");
+                    r6.g2_conteo_regresivo_for(n6);
+                    System.out.println("Conteo regresivo usando while:");
+                    r6.g2_conteo_regresivo_while(n6);
+                    break;
+                case 6:
+                    continuar = false;
+                    System.out.println("Saliendo del menú de Recursión...");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Por favor seleccione una opción del 1 al 6.");
+            }
+            if (continuar) {
+                System.out.println("¿Desea continuar probando más clases de Recursión? (s/n)");
+                String respuesta = scanner.nextLine().trim().toLowerCase();
+                if (!respuesta.equals("s")) {
+                    continuar = false;
+                    System.out.println("Saliendo del menú de Recursión...");
+                }
+            }
+        }
     }
 
     public static void main(String[] args) {
