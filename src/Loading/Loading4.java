@@ -2,7 +2,8 @@ package Loading;
 import java.util.concurrent.TimeUnit;
 
 public class Loading4 {
-    public static void main(String[] args) {
+    
+    public void loading4() {
         System.out.println("L04 -- Bucle For");
         for (int porcentaje = 0; porcentaje <= 100; porcentaje += 5) {
             mostrarAnimacionFor(porcentaje);

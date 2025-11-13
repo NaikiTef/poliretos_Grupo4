@@ -3,8 +3,8 @@ package Recursion;
 import java.util.Scanner;
 
 public class Recursion1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    
+    public void recursion1(Scanner scanner) {
         int n = -1;
         
         // Validación para n: solo números mayores o iguales a 0
@@ -22,8 +22,6 @@ public class Recursion1 {
         } while (n < 0);
         
         System.out.println("Factorial de " + n + " es: " + factorial(n));
-        scanner.close();
-
     }
 
     public static int factorial(int n) {

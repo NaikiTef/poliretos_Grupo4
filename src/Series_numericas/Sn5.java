@@ -1,3 +1,5 @@
+package Series_numericas;
+
 public class Sn5 {
 
     public void Serie5() {
@@ -13,11 +15,12 @@ public class Sn5 {
                 if (numero % e == 0 && e < numero) {
                     e = numero + 1;
                 } else if (e == numero) {
-                    System.out.println(numero);
+                    System.out.print(numero + " ");
                     i++;
                 }
             }
         }
+        System.out.println();
         numero = 1;
 
         System.out.println("S5 con while");
@@ -27,11 +30,12 @@ public class Sn5 {
                 if (contador % i == 0 && i < contador) {
                     i = contador + 1;
                 } else if (i == contador) {
-                    System.out.println(contador);
+                    System.out.print(contador + " ");
                     numero++;
                 }
             }
         }
+        System.out.println();
         numero = 1;
         contador = 1;
 
@@ -42,11 +46,12 @@ public class Sn5 {
                 if (contador % i == 0 && i < contador) {
                     i = contador + 1;
                 } else if (i == contador) {
-                    System.out.println(contador);
+                    System.out.print(contador + " ");
                     numero++;
                 }
             }
         } while (nIngresado >= numero);
+        System.out.println();
     }
 
 }

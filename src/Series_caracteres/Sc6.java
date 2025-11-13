@@ -1,40 +1,48 @@
+package Series_caracteres;
+
+import java.util.Scanner;
+
 public class Sc6 {
 
-    public void SerieCaracteres6() {
+    public void SerieCaracteres6(Scanner scanner) {
+        System.out.print("Ingrese el tamanio de la figura: ");
+        int nElementos = scanner.nextInt();
+        scanner.nextLine();
 
-        Integer nElemetos = 5;
-        Integer contador = 1;
-        Integer x = 96;
+        int contador = 1;
+        int x = 97;
 
-        System.out.println("Sc6 con for");
-        for (int i = 1; i <= nElemetos; i++) {
+        System.out.println("\nSc6 con for");
+        for (int i = 1; i <= nElementos; i++) {
             if (x > 122) {
-                x = 96;
+                x = 97;
             }
-            System.out.println((char) (x + i));
+            System.out.print((char) (x) + " ");
+            x++;
         }
-        x = 96;
+        x = 97;
 
-        System.out.println("Sc6 con while");
-        while (contador <= nElemetos) {
+        System.out.println("\nSc6 con while");
+        while (contador <= nElementos) {
             if (x > 122) {
-                x = 96;
+                x = 97;
             }
-            System.out.println((char) (x + contador));
+            System.out.print((char) (x) + " ");
+            x++;
             contador++;
         }
         contador = 1;
-        x = 96;
+        x = 97;
 
-        System.out.println("Sc6 con do while");
+        System.out.println("\nSc6 con do while");
         do {
             if (x > 122) {
-                x = 96;
+                x = 97;
             }
-            System.out.println((char) (x + contador));
+            System.out.print((char) (x) + " ");
+            x++;
             contador++;
-        } while (contador <= nElemetos);
-        contador = 1;
-        x = 96;
+        } while (contador <= nElementos);
+        // No cerrar el scanner aquí
     }
 }

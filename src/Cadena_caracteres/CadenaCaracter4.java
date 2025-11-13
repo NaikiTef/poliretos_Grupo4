@@ -3,8 +3,8 @@ package Cadena_caracteres;
 import java.util.Scanner;
 
 public class CadenaCaracter4 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    
+    public void cadenaCaracter4(Scanner scanner) {
 
         // Validar que solo se ingresen letras y espacios
         String frase;
@@ -31,14 +31,24 @@ public class CadenaCaracter4 {
 
         } while (!esLetraValida(letra) || esVocal(letra.charAt(0)));
 
-        // Eliminar la letra de la frase
-        String resultado = eliminarLetra(frase, letra.charAt(0));
-
-        System.out.println("\nFrase original: " + frase);
+        // Eliminar la letra de la frase usando los tres métodos
+        System.out.println("\n=== Usando FOR ===");
+        String resultadoFor = eliminarLetra(frase, letra.charAt(0));
+        System.out.println("Frase original: " + frase);
         System.out.println("Letra eliminada: " + letra);
-        System.out.println("Frase resultante: " + resultado);
+        System.out.println("Frase resultante: " + resultadoFor);
 
-        scanner.close();
+        System.out.println("\n=== Usando WHILE ===");
+        String resultadoWhile = eliminarLetraWhile(frase, letra.charAt(0));
+        System.out.println("Frase original: " + frase);
+        System.out.println("Letra eliminada: " + letra);
+        System.out.println("Frase resultante: " + resultadoWhile);
+
+        System.out.println("\n=== Usando DO-WHILE ===");
+        String resultadoDoWhile = eliminarLetraDoWhile(frase, letra.charAt(0));
+        System.out.println("Frase original: " + frase);
+        System.out.println("Letra eliminada: " + letra);
+        System.out.println("Frase resultante: " + resultadoDoWhile);
     }
 
     // Validar que solo se ingresen letras y espacios
@@ -80,6 +90,40 @@ public class CadenaCaracter4 {
             } else {
                 resultado.append(" "); // deja un espacio donde estaba la letra eliminada
             }
+        }
+        return resultado.toString();
+    }
+
+    // Método para eliminar una letra de la frase usando while
+    public static String eliminarLetraWhile(String frase, char letra) {
+        StringBuilder resultado = new StringBuilder();
+        int i = 0;
+        while (i < frase.length()) {
+            char c = frase.charAt(i);
+            if (Character.toLowerCase(c) != Character.toLowerCase(letra)) {
+                resultado.append(c);
+            } else {
+                resultado.append(" "); // deja un espacio donde estaba la letra eliminada
+            }
+            i++;
+        }
+        return resultado.toString();
+    }
+
+    // Método para eliminar una letra de la frase usando do-while
+    public static String eliminarLetraDoWhile(String frase, char letra) {
+        StringBuilder resultado = new StringBuilder();
+        if (frase.length() > 0) {
+            int i = 0;
+            do {
+                char c = frase.charAt(i);
+                if (Character.toLowerCase(c) != Character.toLowerCase(letra)) {
+                    resultado.append(c);
+                } else {
+                    resultado.append(" "); // deja un espacio donde estaba la letra eliminada
+                }
+                i++;
+            } while (i < frase.length());
         }
         return resultado.toString();
     }

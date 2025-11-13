@@ -3,8 +3,8 @@ package Recursion;
 import java.util.Scanner;
 
 public class Recursion2 {
-     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    
+    public void recursion2(Scanner scanner) {
         int a = 0, b = 0;
         boolean entradaValida;
 
@@ -33,7 +33,7 @@ public class Recursion2 {
         } while (!entradaValida);
 
         System.out.println("La suma recursiva de " + a + " + " + b + " es: " + suma(a, b));
-        scanner.close();
+        // No cerrar el scanner
     }
 
     public static int suma(int a, int b) {

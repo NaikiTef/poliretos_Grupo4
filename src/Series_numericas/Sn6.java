@@ -1,4 +1,6 @@
-public class sn6 {
+package Series_numericas;
+
+public class Sn6 {
 
     public void Serie6() {
         Integer nIngresado = 10;

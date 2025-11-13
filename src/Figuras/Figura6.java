@@ -4,8 +4,7 @@ import java.util.Scanner;
 
 public class Figura6 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public void figura6(Scanner scanner) {
 
         int filas = 0;
         // Validación para filas: solo números mayores a 0
@@ -22,23 +21,21 @@ public class Figura6 {
             }
         } while (filas <= 0);
 
-        scanner.close();
-
-        System.out.println("\nFigura 5 usando FOR:");
-        figura5For(filas);
+        System.out.println("\nFigura 6 usando FOR:");
+        figura6For(filas);
         System.out.println();
 
-        System.out.println("Figura 5 usando WHILE:");
-        figura5While(filas);
+        System.out.println("Figura 6 usando WHILE:");
+        figura6While(filas);
         System.out.println();
 
-        System.out.println("Figura 5 usando DO WHILE:");
-        figura5DoWhile(filas);
+        System.out.println("Figura 6 usando DO WHILE:");
+        figura6DoWhile(filas);
         System.out.println();
     }
 
     // Figura con FOR (pirámide normal)
-    public static void figura5For(int filas) {
+    public void figura6For(int filas) {
         for (int i = 0; i < filas; i++) {
             // Espacios
             for (int e = i; e < filas - 1; e++) {
@@ -53,7 +50,7 @@ public class Figura6 {
     }
 
     // Figura con WHILE
-    public static void figura5While(int filas) {
+    public void figura6While(int filas) {
         int i = 0;
         while (i < filas) {
             int e = i;
@@ -74,7 +71,7 @@ public class Figura6 {
     }
 
     // Figura con DO WHILE
-    public static void figura5DoWhile(int filas) {
+    public void figura6DoWhile(int filas) {
         int i = 0;
         do {
             int e = i;

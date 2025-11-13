@@ -560,7 +560,7 @@ public class Loading {
     }
 
     // Funcion main para ejecutar las animaciones
-    public static void main(String[] args) {
+    public void loading() {
 
         //Loading 08 --Bucle For
         System.out.println("Loading 08 - Bucle For - Letras del nombre:");

@@ -3,8 +3,8 @@ package Cadena_caracteres;
 import java.util.Scanner;
 
 public class CadenaCaracter3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    
+    public void cadenaCaracter3(Scanner scanner) {
 
         // Validar que solo se ingresen letras
         String frase;
@@ -32,8 +32,6 @@ public class CadenaCaracter3 {
         System.out.println("Frase original: " + frase);
         System.out.println("Vocal eliminada: " + vocal);
         System.out.println("Frase resultante: " + resultado);
-
-        scanner.close();
     }
 
     // Validar que solo se ingresen letras y espacios
